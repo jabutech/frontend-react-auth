@@ -1,0 +1,14 @@
+# Docker compose version
+version: '3'
+
+services: 
+  node:
+    container_name: frontend-salescorporate-react
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes: 
+      - '.:/app'
+      - '/app/node_modules'
+    ports: 
+      - '8083:3000'
